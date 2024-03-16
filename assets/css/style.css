@@ -1,6 +1,6 @@
 html {
-  font-family: "Montserrat, Smythe", system-ui;
-  font-style: normal;
+    font-family: "Montserrat, Smythe", system-ui;
+    font-style: normal;
 }
 
 body {
@@ -8,26 +8,14 @@ body {
     max-width: 650px;
 }
 
-:root {
-    --bar-width: 50px;
-    --bar-height: 8px;
-    --hamburger-gap: 6px;
-    --foreground: #0b057c;
-    --background: #d91111;
-    --hamburger-margin: 8px;
-    --animation-timing: 200ms ease-in-out;
-    --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
-}
-
-
-
 /* header */
 
 header {
     font-family: "Smythe", system-ui;
-    font-size: 2.5rem;
+    font-size: 2rem;
+    font-weight: 900;
     padding: .2em;
-    margin: 0 auto;
+    margin: 2.5em auto 0;
 }
 
 .img-wrapper {
@@ -48,83 +36,77 @@ header {
 
 /* mobile navigation */
 
-.mobile-hamburger-menu {
-    --x-width: calc(var(--hamburger-height) * 1.41421356237) ;
-
-    display: flex;
-    flex-direction: column;
-    gap: var(--hamburger-gap);
-
-    width: max-content;
-    position: absolute;
-    top: .25rem;
-    right: .5rem;
-    z-index: 2;
-    cursor: pointer;
+button {
+    background-color: transparent;
+    border: none;
 }
 
-.mobile-hamburger-menu::before,
-.mobile-hamburger-menu::after,
-.mobile-hamburger-menu input {
-    content: " ";
-    width: 45px;
-    height: 8px;
+.fa-bars {
+    display: block;
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 3rem;
+    color: #0b057c;
+}
+
+.mobile-nav-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     background-color: #0b057c;
-    border-radius: 99px;
-    transform-origin: left center;
-    transition: opacity var(--animation-timing), width var(--animation-timing);
+    color: #d91111;
+    z-index: 2;
 }
 
-.mobile-hamburger-menu input {
-    appearance: none;
-    padding: 0;
-    margin: 0;
-    outline: none;
-    pointer-events: none;
+.fa-xmark {
+    display: inline-block;
+    position: absolute;
+    top: .5em;
+    right: .5em;
+    font-size: 3rem;
+    color: #d91111;
+    cursor: none;
 }
 
-.mobile-hamburger-menu:has(input:checked)::before {
-    rotate: 45deg;
-    width: var(--x-width);
-}
-
-.mobile-hamburger-menu:has(input:checked)::after {
-    rotate: -45deg;
-    width: var(--x-width);
-}
-
-.mobile-hamburger-menu input:checked {
-    opacity: 0;
-    width: 0;
-}
-
-
-.mobile-nav-wrapper nav ul {
+.mobile-nav-menu nav ul {
     text-align: center;
     list-style: none;
-    padding: 0;
-    margin: 0 1em;
+    padding: 1em auto;
+    margin: 5em auto;
 }
 
-.mobile-nav-wrapper nav ul li a {
+.mobile-nav-menu nav ul li a {
     text-decoration: none;
-    color: #0b057c;
+    color: #d91111;
+    font-size: 5rem;
     font-weight: 500;
 }   
 
-.mobile-nav-wrapper nav ul li a:hover {
+/* .mobile-nav-menu nav ul li a:hover {
     color: #ff0000;
+} */
+
+.mobile-nav-menu nav ul li {
+    padding: 1em 0;
+    margin: 1em auto;
+    
 }
 
-.mobile-nav-wrapper nav ul li {
-    margin: .75em 0;
+.mobile-nav-menu nav ul li:not(:last-child) {
+    border-bottom: 2px dashed #d91111;
+    width: 90%;
+    height: 3em;
 }
 
-.mobile-nav-wrapper nav ul li:not(:last-child) {
-    border-bottom: 2px dashed #0b057c;
-    width: 100%;
-    height: 2em;
-}
+/* .mobile-hamburger-menu:has(input:checked) + .mobile-nav-menu {
+    display: none;
+} */
 
 /* Home - main */
 
@@ -140,16 +122,33 @@ header {
     height: 100%;
 }
 
+
+.img-hero h2,
+.img-hero p {
+    position: relative;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.5em;
+    margin: 1em auto;
+    padding: 1em;
+}
+
+.img-hero h2 {
+    line-height: 1.2em;
+    text-align: center;
+}
+
+/* background image */
 .img-hero::before {
     content: "";
     background-image: url("/assets/images/texasStateFlag.png");
-    background-size: 60%;
+    background-size: 100%;
     background-repeat: no-repeat;
-    position: absolute;
-    top: 1.5em;
-    left: 9em;
+    position: fixed;
+    top: 15em;
+    left: 0;
     right: 0;
-    bottom: 0;
+    bottom: 15em;
     opacity: 0.25;
 }
 
