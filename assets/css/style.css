@@ -5,7 +5,7 @@ html {
 
 body {
     margin: 3em auto;
-    background-color: #eeeded;
+    background-color: #b7cedc;
 }
 
 /* header */
@@ -84,25 +84,13 @@ header {
     font-weight: 500;
 }   
 
-/* .mobile-nav-menu nav ul li a:hover {
-    color: #ff0000;
-} */
+
 
 .mobile-nav-menu nav ul li {
     padding: 1em 0;
     margin: 1em auto;
     
 }
-
-.mobile-nav-menu nav ul li:not(:last-child) {
-    border-bottom: 2px dashed #d91111;
-    width: 90%;
-    height: 3em;
-}
-
-/* .mobile-hamburger-menu:has(input:checked) + .mobile-nav-menu {
-    display: none;
-} */
 
 /* home - main */
 
@@ -148,7 +136,7 @@ header {
     left: 1em;
     right: 1em;
     bottom: 15em;
-    opacity: 0.25;
+    opacity: .5;
     height: 100%;
 }
 
@@ -215,45 +203,79 @@ footer {
 }
 
 @media (min-width: 800px) {
-  
-    .header-wrapper {
+
+    /* navigation */
+
+    .mobile-nav-menu {
         display: flex;
-        justify-content: space-around;
-        align-items: flex-start;
-        margin: 1em 0;
-        font-size: 3rem;
+        justify-content: flex-end;
+        align-items: center;
+        height: 2.25em;
+        width: 100%;
+        background-color: #0b057c;
     }
 
-    .img-wrapper {
+    .mobile-nav-menu nav ul {
         display: flex;
-        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin-right: 6em;
+        width: 100%;
+        height: 100%;
+    }
+
+    .mobile-nav-menu nav ul li a{
+        font-size: 2rem;
+        padding: 1em 0;
+        margin: 1em 0;
+        border-bottom: none;
+    }
+
+    .mobile-nav-menu nav ul li a:hover {
+        cursor: pointer;
+        color: #fff;
     }
 
     .img-wrapper h1 {
         margin: 1em auto;
+        font-size: 2.5rem;
     }
 
-    .fa-bars {
+    .fa-bars,
+    .fa-xmark {
         display: none;
-    }
-
-    .header section nav {
-        display: inline-block;
-    }
-
-    .nav-menu nav ul {
-        display: flex;
-        margin: 5em auto;
-    }
-
-    .nav-menu nav ul li {
-        display: flex;
-        padding: 1em 0;
-        margin: 1em auto;
     }
 
     .disabled {
         pointer-events: none;
-        color: #bdbdbd
+        opacity: .6;
+    }
+
+    /* images */
+
+    .img-hero:before {
+        z-index: -1;
+        height: 80%;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .things-to-do {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5em;
+    }
+
+    /* header */
+    .img-hero h2 {
+        font-size: 2.5rem;
+    }
+
+    .img-hero p {
+        font-size: 1.5rem;
+    }
+
+    .individual-things h2 {
+        font-size: 1.5rem;
     }
 }
