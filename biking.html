@@ -1,11 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Texas Biking Trails</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Texas Biking Trails</title>
+    <!-- favicon -->
+    <link rel="icon" href="assets/images/favicon_io/favicon.ico" type="image/x-icon">
+    <!-- google fonts - Smythe & Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Smythe&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/9c30a36023.js" crossorigin="anonymous"></script>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    
+    <header>
+        <div>
+            <i id="fa-bars" class="fa-solid fa-bars"></i>
+        </div>
+        <div class="img-wrapper">
+            <img src="assets/images/hikeTxOutline.png" class="img-texas" alt="State of Texas outline with hiker on top">
+            <h1>Texas Best Hiking and Biking Trails</h1>
+            <img src="assets/images/texasOutline.png" class="img-texas" alt="State of Texas outline with Bike TX on top">
+        </div>
+        <section id="mobile-nav-menu" class="mobile-nav-menu nav-menu">
+            <div>
+                <i id="fa-xmark"class="fa-solid fa-xmark"></i>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="hiking.html">Hiking</a></li>
+                    <li><a href="biking.html" class="disabled">Biking</a></li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+    <main class="img-hero">
+        <div>
+            <h2>Bike Trails Needed to Complete in Texas</h2>
+            <p>The Lone Star State is one of the best places to ride your bike. It is full of a variety of terrain, whether road or mountain. Capture yourself with air blowing your hair and the sun, making your ride magical.</p>
+        </div>
+
+        <section class="things-to-do">
+            <div class="individual-things">
+                <h2>Willow City Loop</h2>
+                <img src="assets/images/willowCityBikeLoop.png" alt="Map of Willow City Bike Loop">
+                <ul>
+                    <li>Distance: 55.8 miles</li>
+                    <li>Elevation: 2,877 feet</li>
+                    <li>Type: loop</li>
+                </ul>
+                <p>One of Texas's most loved bike routes. This ride will show you nature in the heart of the Hill Country, with its rural landscape and, at the right time - the abundance of wildflowers.</p>
+            </div>
+            <div class="individual-things">
+                <h2>Walnut Creek Metropolitan Park</h2>
+                <img src="assets/images/walnut_creek_trail_map.png" alt="Map of Walnut Creek Metro Bike Park">
+                <ul>
+                    <li>Distance: 10.5 miles</li>
+                    <li>Elevation: 697 feet</li>
+                    <li>Type: loop</li>
+                </ul>
+                <p>Walnut Creek Metro Park has many trails for BMX and mountain biking. The terrain is full of jumps and gorgeous views in the heart of Austin, TX.</p>
+            </div>
+            <div class="individual-things">
+                <h2>Northeast Texas Trail</h2>
+                <img src="assets/images/neTrailMap.png" alt="Map of North East Bike Trail">
+                <ul>
+                    <li>Distance: 133 miles</li>
+                    <li>Elevation: 1,944 feet</li>
+                    <li>Type: one-way</li>
+                </ul>
+                <p>Northeast Texas Trail is not for the faint of heart. It spans from the Dallas-Fort Worth area to Texarkana and follows the Union Pacific and Chaparral railroads. You will need a mountain bike, as the roads are not paved.</p>
+            </div>
+            <div class="individual-things">
+                <h2>River Legacy Park Trail</h2>
+                <img src="assets/images/river-legacy-park-trail-map.png" alt="Map of River Legacy Trail">
+                <ul>
+                    <li>Distance: 10 miles</li>
+                    <li>Elevation: 301 feet</li>
+                    <li>Type: loop</li>
+                </ul>
+                <p>River Legacy Bike Trail is perfect for road or mountain biking. It is located in Arlington, TX, and accommodates beginners to advanced riders.</p>
+            </div>
+            <div class="individual-things">
+                <h2>Big Bend Ranch State Park</h2>
+                <img src="assets/images/big-bend-ranch-trail-map.png" alt="Map of Big Bend Ranch Trails">
+                <ul>
+                    <li>Distance: 239 miles</li>
+                    <li>Elevation: 12,000 feet</li>
+                    <li>Type: one-way</li>
+                </ul>
+                <p>Big Bend Ranch State Park trails rank at the top of the country. A vast desert playground full of the past ranchers, Native Americans, and Spaniards. The stunning natural single-track trails are a winding web of fantastic scenery.</p>
+            </div>
+            <div class="individual-things">
+                <h2>Palo Duro Canyon</h2>
+                <img src="assets/images/palo-duro-canyon-state-park-trail-map.png" alt="Map of Palo Duro Canyon">
+                <ul>
+                    <li>Distance: 66 miles</li>
+                    <li>Elevation: 3,500 feet</li>
+                    <li>Type: one-way</li>
+                </ul>
+                <p>Palo Duro Canyon is located in the Texas Panhandle and has trails for all levels of adventurous bikers. Bikers will wind their way through the second-largest canyon in the US.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 KLB Development</p>
+        <h6>Information from VINGO. </h6>
+    </footer>
+    <script src="index.js" type="module"></script>
 </body>
 </html>

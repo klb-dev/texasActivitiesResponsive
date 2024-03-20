@@ -5,7 +5,7 @@ html {
 
 body {
     margin: 3em auto;
-    max-width: 650px;
+    background-color: #eeeded;
 }
 
 /* header */
@@ -16,6 +16,8 @@ header {
     font-weight: 900;
     padding: .2em;
     margin: 2.5em auto 0;
+    text-align: center;
+    width: 100%;
 }
 
 .img-wrapper {
@@ -25,27 +27,22 @@ header {
 }
 
 .img-texas {
-    width: 30%;
-    height: 30%;
-    object-fit: cover;
+    width: 25%;
+    height: 25%;
 }
 
 .img-wrapper h1 {
-    margin-left: .75em;
+    margin: 0 .75em;
+    font-size: 1.35rem;
 }
 
 /* mobile navigation */
 
-button {
-    background-color: transparent;
-    border: none;
-}
-
 .fa-bars {
     display: block;
     position: fixed;
-    top: 1.5rem;
-    right: 1.5rem;
+    top: 1.5em;
+    right: 1.5em;
     font-size: 3rem;
     color: #0b057c;
 }
@@ -61,14 +58,14 @@ button {
     height: 100vh;
     background-color: #0b057c;
     color: #d91111;
-    z-index: 2;
+    z-index: 50;
 }
 
 .fa-xmark {
-    display: inline-block;
+    display: block;
     position: absolute;
-    top: .5em;
-    right: .5em;
+    top: 1.5rem;
+    right: 1.5rem;
     font-size: 3rem;
     color: #d91111;
     cursor: none;
@@ -108,13 +105,7 @@ button {
     display: none;
 } */
 
-/* Home - main */
-
-.main {
-    font-family: 'Montserrat', sans-serif;
-    margin-top: 2em;
-    margin-bottom: 2em;
-}
+/* home - main */
 
 .img-hero {
     position: relative;
@@ -169,6 +160,57 @@ button {
     
 }
 
+/* hike and bike pages */
+
+/* main */
+.things-to-do {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.individual-things {
+    position: relative;
+    width: 100%;
+    margin-bottom: 2em;
+    background-color: #bdbdbd;
+}
+
+.individual-things h2 {
+    position: absolute;
+    top: -2.25rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: #000 1px 1px 2px;
+}
+
+.individual-things p {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5em;
+    margin: 0 auto;
+}
+
+.individual-things img {
+    width: 100%;
+    margin: 0;
+}
+
+.individual-things ul {
+    list-style: none;
+    padding: 0;
+    margin-top: .25em;
+    margin-left: 1em;
+    font-weight: 600;
+}
+
+.individual-things ul li {
+    padding: .05em 0;
+    margin: .15em 0;
+}
+
 /* footer */
 footer {
     font-family: 'Montserrat', system-ui;
@@ -179,3 +221,46 @@ footer {
     padding: 1em;
 }
 
+@media (min-width: 800px) {
+  
+    .header-wrapper {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        margin: 1em 0;
+        font-size: 3rem;
+    }
+
+    .img-wrapper {
+        display: flex;
+        text-align: center;
+    }
+
+    .img-wrapper h1 {
+        margin: 1em auto;
+    }
+
+    .fa-bars {
+        display: none;
+    }
+
+    .header section nav {
+        display: inline-block;
+    }
+
+    .nav-menu nav ul {
+        display: flex;
+        margin: 5em auto;
+    }
+
+    .nav-menu nav ul li {
+        display: flex;
+        padding: 1em 0;
+        margin: 1em auto;
+    }
+
+    .disabled {
+        pointer-events: none;
+        color: #bdbdbd
+    }
+}
