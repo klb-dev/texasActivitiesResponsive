@@ -5,7 +5,6 @@ This project is interesting fun facts about the best hiking and biking trails in
 - HTML
 - CSS
 - JavaScript
-  
 - Mobile first is a design approach utilizing user        experience for mobile devices. Most people check websites and apps on their phones so using the mobile first I created the site for mobile devices.
 - Responsive Design is taking into account the different screen sizes people use the Internet. Since the explosion of mobiles, tablets, laptops, and desktops it is important to give users designs for each screen size. My approach is about using CSS media queries for a larger screen. Images, font size and weight have been adjusted for the screen sizes.   
 
@@ -24,8 +23,10 @@ I am new to the learning Frontend Development and I will say that Google has bec
 
 # AUTHOR
 
-*2024*
-
 **Karen Byrd**
 
-Taking [_Scrimba Bootcamp_](https://scrimba.com)  learning responsive design.
+*2024* - [_Scrimba Bootcamp_](https://scrimba.com) learning responsive design.
+
+
+
+
